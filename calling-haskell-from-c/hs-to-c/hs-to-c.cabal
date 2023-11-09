@@ -1,0 +1,19 @@
+name: hs-to-c
+author: Anthony Carrico
+version: 0
+license: PublicDomain
+build-type: Simple
+cabal-version: >=2.0
+
+foreign-library HsToC
+  type: native-shared
+  lib-version-linux: 0.0.0
+  hs-source-dirs: src
+  c-sources: csrc/HsToC.c
+  ghc-options: -stubdir include
+  include-dirs: include
+  install-includes: HsToC/Fib_stub.h csrc/HsToC.h
+  exposed-modules: HsToC.Fib
+  build-depends: base
+  default-language: Haskell2010
+  other-modules: HsToC.Fib

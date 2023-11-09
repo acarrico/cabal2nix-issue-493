@@ -1,0 +1,1 @@
+See [[https://github.com/NixOS/cabal2nix/issues/493]]
